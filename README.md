@@ -1,2 +1,2 @@
-# Lexi---Personal-Assistant
+# Lexi-Personal-Assistant
 Storage solution as a personal assistant.
