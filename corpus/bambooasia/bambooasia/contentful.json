@@ -1,0 +1,10 @@
+{
+  "development": {
+    "spaceId": "rz2p1iv4o653",
+    "accessToken": "130789473cb86510f5597640ceeae19a40a17156b65fec1b3238030190361428"
+  },
+  "production": {
+    "spaceId": "rz2p1iv4o653",
+    "accessToken": "130789473cb86510f5597640ceeae19a40a17156b65fec1b3238030190361428"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "vibelead",
+  "short_name": "vibelead",
+  "start_url": "/",
+  "display": "standalone"
+}

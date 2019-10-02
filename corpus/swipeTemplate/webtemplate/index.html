@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang=en-GB>
+  <head>
+
+    <!--META-->
+    <meta charset='utf-8'>
+    <link rel='canonical' href=''>
+    <link rel='manifest' href='manifest.json'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <script src='./src/scripts/pwacompat.min.js' async></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!--SEO-->
+    <title>Template</title>
+    <meta name='description' content=''>
+    <meta name="keywords" content="Template">
+
+    <!--LIBRARIES-->
+    <script type="module" src="./src/scripts/setup.js"></script>
+    <script src="./libraries/axios/index.js" ></script>
+    <script src="./libraries/lodash/index.js" ></script>
+    <script src="./libraries/react/react.production.min.js" ></script>
+    <script src="./libraries/react/react-dom.production.min.js" ></script>
+    <script src="./libraries/polymer/webcomponents-loader.js" ></script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js" ></script>
+
+    <!--APPLE-->
+    <link rel='apple-touch-icon' href='/'>
+    <meta name='application-name' content=''>
+    <link rel='icon' sizes='192x192' href='/'>
+    <meta name='theme-color' content='#2196F3'>
+    <meta name='msapplication-TileImage' content=''>
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-title' content=''>
+    <meta name='msapplication-TileColor' content='#2196F3'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+
+    <!--GOOGLE-->
+    <meta property='og:url' content=''>
+    <meta property='og:image' content=''>
+    <meta property='og:type' content='website'>
+    <meta property='og:description' content=''>
+    <meta property='og:title' content=''>
+
+    <!--TWITTER-->
+    <meta name='twitter:url' content=''>
+    <meta name='twitter:title' content=''>
+    <meta name='twitter:image' content=''>
+    <meta name='twitter:description' content=''>
+    <meta name='twitter:card' content='summary'>
+    <meta name='twitter:creator' content='@niyeturner'>
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="./src/pages/index/styles/index.css" >
+
+  </head>
+  <body>
+    <style media="screen">
+      .treetop{
+        position: absolute;
+      }
+      @keyframes pulse {
+        0% {
+          height:33vh;
+          width:33vh;
+        }
+        50%{
+          height:25vh;
+          width:25vh;
+        }
+        100% {
+          height:33vh;
+          width:33vh;
+        }
+      }
+      #root{
+        z-index: -1;
+      }
+    </style>
+
+    <div id="loading" class="treetop"></div>
+    <div id="root" class="treetop"></div>
+    <script  type="module" src="./src/pages/index/index.js"></script>
+    <!-- <script  type="text/babel" src="./src/pages/index/index.js"></script> -->
+
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .then(function(registration) {
+              console.log('Service Worker Registered');
+          });
+
+        navigator.serviceWorker.ready.then(function(registration) {
+           console.log('Service Worker Ready');
+        });
+      }
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59325548-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

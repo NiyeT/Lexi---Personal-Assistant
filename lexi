@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+
+import argparse
+from os import getcwd
+from sys import path
+path.append('/home/guardin/lexi/guardin/corpus/python_modules')
+import lexi
+
+parser = argparse.ArgumentParser(description="Hey!, I'm your personal assistant, but for now I can only retrieve and store files. (:")
+parser.add_argument("-store",help="")
+parser.add_argument("-get",help="")
+parser.add_argument("-create",help="")
+parser.add_argument("-delete",help="")
+args = vars(parser.parse_args())
+
+def main():
+    l=vars(lexi)
+    for arg in args.keys():
+        if(args[arg]):l[arg](args)
+
+if(__name__=="__main__"):
+    # #automatic file categorization and storage
+    # #takes a description and produces tags for a value
+    main()

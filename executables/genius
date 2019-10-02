@@ -1,0 +1,46 @@
+import argparse
+
+parser = argparse.ArgumentParser(description="")
+parser.add_argument("-genres") #takes artist
+parser.add_argument("-artists") #takes a genre
+parser.add_argument("-albums") #takes an artist
+parser.add_argument("-songs") #takes an artist and an album
+parser.add_argument("-song") #takes an artist and a song title
+
+def genres(artist):
+    pass
+
+#Input
+    #genre title
+#Output
+    #list of artists
+def artists(genre):
+    pass
+
+#Input
+    #artist
+#Output
+    #list of albums
+def albums(artist):
+    pass
+
+#Input
+    #artist
+    #album
+#Output
+    #list of songs
+def songs(artist,album):
+    pass
+
+#Input
+    #artist
+    #title
+#Output
+    #lyrics
+    #release date
+    #author
+    #producer
+def song(artist,song):
+    pass
+
+args = parser.parse_args()

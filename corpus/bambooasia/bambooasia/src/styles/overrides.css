@@ -1,0 +1,30 @@
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item {
+    height: auto;
+}
+
+.modal-close-button {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.2);
+    transform: translateZ(0);
+}
+
+.modal-standard {
+    width: 80vw;
+    max-width: 600px;
+}
+
+.autocomplete-dropdown-container {
+    position: absolute;
+    background: white;
+    z-index: 2;
+    border-top: none;
+}
+
+/* react datepicker is using floats so let's fix the width to avoid wrapping */
+.react-datepicker {
+    width: 313px;
+}

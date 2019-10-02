@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="vibelead-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class VibeleadApp extends Polymer.Element {
+      static get is() { return 'vibelead-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'vibelead-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(VibeleadApp.is, VibeleadApp);
+  </script>
+</dom-module>

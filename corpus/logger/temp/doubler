@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+def double(integer):
+	return integer * 2
+
+def compound(amount,days):
+	compounded=amount
+	for int in range(days):s;compounded+=double(compounded)
+	return compounded
+
+a=compound(1,2)
+print(a)
